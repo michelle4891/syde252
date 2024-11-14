@@ -81,7 +81,7 @@ def plot_cosine(signal, freq, sr, title):
 
 
 if __name__ == "__main__":
-    files = ["fox_white_noise.wav"]  # Add other sound files here
+    files = ["../data/fox_white_noise.wav"]  # Add other sound files here
     FREQ = 1500
     for fp in files:
         y, sr = read_and_resample(fp)

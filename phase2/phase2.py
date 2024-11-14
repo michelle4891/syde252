@@ -90,7 +90,7 @@ if __name__ == "__main__":
     cutoff_freq = 400  # Hz
 
     for fp in files:
-        # Phase 1: Read and resample audio
+        # Phase 1: Read and resample audio to 16kHz (sr)
         y, sr = read_and_resample(fp)
         
         # Phase 2: Bandpass filter bank creation
@@ -115,5 +115,5 @@ if __name__ == "__main__":
         plot_signal(envelope_signals[-1], sr, f"Extracted envelope of the highest frequency channel_{fp}")
 
         # Save the processed audio outputs (optional)
-        save_audio(envelope_signals[0], sr, f"envelope_lowest_channel_{fp}")
-        save_audio(envelope_signals[-1], sr, f"envelope_highest_channel_{fp}")
+        # save_audio(envelope_signals[0], sr, f"envelope_lowest_channel_{fp}")
+        # save_audio(envelope_signals[-1], sr, f"envelope_highest_channel_{fp}")
